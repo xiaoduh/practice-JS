@@ -1,0 +1,69 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.accueil {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    background: url(ressources/accueil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-size: 50px;
+    padding-top: 250px;
+    padding-left: 250px;
+}
+
+.media-container {
+    display: flex;
+    padding-left: 240px;
+    margin: 20px 0px 40px 0px;
+}
+
+.media-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(240, 239, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.icones {
+    width: 27px;
+}
+
+.btn {
+    margin-left: 240px;
+    background: transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 3px;
+    border: 2px solid #333;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background: #f1f1f1;
+    color: #333;
+}
