@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>TD1</title>
+</head>
+<body>
+	<h1>TD Numéro 1</h1>
+	<script>
+	// Faire une boucle for et afficher les valeurs de l’indice de boucle
+	/* Commencer à la valeur 1
+	   Terminer à la valeur 10 inclus
+	   Parcourir tous les indices entre 1 et 10. */
+for(let i = 1; i < 11; i++)
+console.log(i);
+
+	// Reprendre la boucle du TD-1
+	// Dans la boucle tester si un nombre est pair.
+	// Si il est pair afficher le nombre concaténé avec la chaine "est pair"
+	// Sinon c'est qu'il est impair, alors afficher le nombre concaténé avec la chaine "est impair"
+	// Pour tester si un nombre est pair on utilise le modulo %
+	// Aide si nombre % 2 est égal à zéro il est pair.
+
+for( i = 1; i < 11; i++)
+if(i % 2 == 0) {
+	console.log(i + " est pair");
+}
+else {
+	console.log(i + " est impair");
+}
+
+	// Faire ce qu’il faut pour que ça marche
+function afficherPairOuImpair(i){
+	for(let i = 1; i < 11; i++)
+	if(i % 2 == 0) console.log(i + " est pair");
+	else console.log(i+ " est impair");
+}
+afficherPairOuImpair(i);
+
+	// Faire ce qu’il faut pour que ça marche
+function etrePair(i) {
+	if(i % 2 == 0){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+	for(let i=1 ; i <= 10 ; i++) {
+		if ( etrePair(i) == true ) console.log(i+' est pair');
+		else console.log(i+' est impair');
+	}
+
+/* 			// Je vous donne trois tableaux
+		let prixAchats = [20,12,15,32,40];
+		let prixVentes = [22,10,18,34,39];
+		let nbAction   = [10,15,20,15,10];
+		// C'est la taille des tableaux
+		// Pour le moment on la code en dur.
+		let taille = 5;
+		// Je vous demande d'écrire le corps de la fonction 
+		// pour calculer ce qu'a gagné ou perdu le trader
+		function calculerBilan(pA,pV,nb,taille) {
+			let resultatCalc = 0;
+			for(i = 0; i < taille; i++) {
+			resultatCalc = resultatCalc + (pV[i] - pA[i]) * nb[i];
+			}
+			return resultatCalc;
+		}
+		console.log(calculerBilan(prixAchats,prixVentes,nbAction,taille)); */
+
+		// Je vous donne deux tableaux
+		let prixAchats = [20,12,15,32,40];
+		let prixVentes = [22,10,18,34,39];
+		// Je vous demande d'écrire le corps de la fonction 
+		// pour calculer le nombre de trade que le trader a gagner
+		// Pour trouver la taille d'un tableau tableau.length
+		function compterTradeGagnant(pA,pV) {
+			let taille = 0;
+			let tradeWon = 0;
+			taille = pA.length;
+			for( let i = 0; i <= taille; i++) {
+				if ((pV[i] - pA[i]) > 0) tradeWon++;
+			}
+			
+			return tradeWon;
+		}
+		console.log("Trade gagnant => "+compterTradeGagnant(prixAchats,prixVentes));
+
+
+	</script>
+</body>
+</html>

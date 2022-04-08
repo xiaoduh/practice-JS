@@ -1,0 +1,49 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    height: 80vh;
+    font-family: Abril Fatface;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.title {
+    position: relative;
+  }
+
+.title span {
+    color: orangered;
+    font-size: 150px;
+    transition: 0.5s;
+    font-weight: 100;
+    will-change: transform;
+    display: inline-block;
+  }
+
+.s1 span {
+    transform-origin: bottom;
+  }
+.s2 span {
+    transform-origin: top;
+    transform: translateY(100%) rotateX(-90deg);
+  }
+.s2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+.title:hover .s1 span {
+    transform: translateY(-100%) rotateX(-90deg);
+  }
+.title:hover .s2 span {
+    transform: translateY(0%) rotateX(0deg);
+  }
