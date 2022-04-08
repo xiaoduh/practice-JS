@@ -1,0 +1,44 @@
+/*# sourceMappingURL=style.css.map */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #eee;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+.bg-image {
+    background: url(./media/basic-pics/rainbow-1467988_1920.jpg) no-repeat center;
+    height: 100vh;
+    width: 100%;
+    filter: blur(4px) contrast(80%);
+}
+
+h1 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 5%;
+}
+
+.fa-tint {
+    color: rgb(160, 160, 160);
+    position: absolute;
+    top: 0%;
+    animation: fall linear forwards;
+}
+
+/* permet de définir les étapes qui composent la séquences d'une animation CSS */
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
