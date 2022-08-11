@@ -124,6 +124,12 @@ const utils = {
     this.storage();
   },
 
+  reset: function () {
+    exerciceArray = basicArray;
+    page.lobby();
+    this.storage();
+  },
+
   //   rebootLobby: function () {
   //     const reboot = document.getElementById("reboot");
   //     reboot.addEventListener("click", (e) => {
@@ -140,6 +146,7 @@ const utils = {
   //         { pic: 9, min: 1 },
   //       ];
   //       page.lobby();
+  //       this.storage();
   //     });
   //   },
 
@@ -188,10 +195,12 @@ const page = {
 
   finish: function () {
     utils.pageContent(
-      "C'est terminé <i id='reboot' class='fas fa-undo'></i>",
+      "C'est terminé",
       "<button id='start'>Recommencer</button>",
-      "<button id='reboot' class='btn-reboot'>Réinintialiser<i class='far fa-times-circle'></i></button>"
+      "<button id='reset' class='btn-reboot'>Réinintialiser<i class='far fa-times-circle'></i></button>"
     );
+    start.addEventListener("click", () => this.routine());
+    reset.addEventListener("click", () => utils.reset());
   },
 };
 
